@@ -32,12 +32,12 @@ public class RhymersJUnitTest {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {
-            boolean result = rhymer.isFull();
+            boolean result = rhymer.isStackFull();
             Assert.assertEquals(false, result);
             rhymer.countIn(888);
         }
 
-        boolean result = rhymer.isFull();
+        boolean result = rhymer.isStackFull();
         Assert.assertEquals(true, result);
     }
 
